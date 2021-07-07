@@ -1,0 +1,47 @@
+﻿@model List<PaidBills>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+
+            <div class="col-6">
+
+                <h2>Fatura Özeti</h2>
+
+                <h3>Kullanıcı Bilgileri</h3>
+                <ul>
+                    <li>Daire Sakini : @item.User.FirstName @item.User.LastName</li>
+                    <li>Telefon No :@item.User.Phone</li>
+                    <li>Mail Adresş :@item.User.Email</li>
+                </ul>
+                <h3>Daire Bilgileri</h3>
+                <ul>
+                    <li>
+                        Daire Blok : @item.Circle.Block
+                    </li>
+                    <li>
+                        Daire Katı :@item.Circle.Floor
+                    </li>
+                    <li>
+                        Daire No :@item.Circle.Number
+                    </li>
+                </ul>
+                <h3>Fatura Bilgileri </h3>
+                <ul>
+                    <li>Ödenen Tarih : @item.PaidDate</li>
+                    <li>Fatura Ayı : @item.Month</li>
+                    <li>Aidat : @item.Dues</li>
+                    <li>Elektrik : @item.ElectricityBill</li>
+                    <li>Gaz : @item.GasBill</li>
+                    <li>Su : @item.WaterBill</li>
+                    <li>Toplam Ödenen Para : @item.TotalBill</li>
+                </ul>
+                <hr />
+
+            </div>
+            
+
+        }
+    </div>
+</div>

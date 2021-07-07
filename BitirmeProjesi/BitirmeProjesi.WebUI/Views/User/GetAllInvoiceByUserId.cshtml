@@ -1,0 +1,41 @@
+﻿@model List<Circle>
+
+@if(Model.Count == 0) 
+{
+   <h1 class="text-danger"> Ödeyebileceğiniz bir fatura bulunmamakta. </h1>
+}
+    <div class="container">
+        @foreach (var circle in Model)
+        {
+        <div class="row">
+            <div class="col-8">
+                <h2>Daire Blok : @circle.Block </h2>
+                <h2>Daire No : @circle.Number</h2>
+                <h4>Daire Sakini : @circle.User.FirstName @circle.User.LastName </h4>
+                @foreach (var invoice in circle.Invoices)
+                {
+                    <h3>Ay : @invoice.Month </h3>
+                    <ul>
+                        <li>
+                           Aidat : @invoice.Dues
+                        </li>
+                        <li>
+                           Elektrik : @invoice.ElectricityBill
+                        </li>
+                        <li>
+                           Gaz : @invoice.GasBill
+                        </li>
+                        <li>
+                            Su : @invoice.WaterBill
+                        </li>
+                    </ul>
+
+                    <a href="/User/PayBill/@invoice.Id" class="btn btn-primary"> pay bill </a>                     
+                    <hr />
+
+                }
+            </div>
+        </div>
+        }
+    
+    </div> 

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<IGrouping<string, Invoice>>
+
+<div class="container">
+
+    @foreach (var group in Model)
+    {
+        
+        <div class="row">
+            <div class="col-6">
+
+                <h1 class="text-danger"> @group.Key</h1>
+                <h3>Fatura Sayısı :  @group.Count()</h3>
+                @foreach (var invoice in group)
+                {
+                    <h3>Kullanıcı Bilgileri</h3>
+                    <ul>
+                        <li>Daire Sakini : @invoice.Circle.User.FirstName @invoice.Circle.User.LastName</li>
+                        <li>Telefon No :@invoice.Circle.User.Phone</li>
+                        <li>Mail Adresş :@invoice.Circle.User.Email</li>
+                    </ul>
+                    <h3>Daire Bilgileri</h3>
+                    <ul>
+                        <li>
+                            Daire Blok : @invoice.Circle.Block
+                        </li>
+                        <li>
+                            Daire Katı :@invoice.Circle.Floor
+                        </li>
+                        <li>
+                            Daire No :@invoice.Circle.Number
+                        </li>
+                    </ul>
+                    <h3>Fatura Bilgileri </h3>
+                    <ul>
+                        <li>Aidat : @invoice.Dues </li>
+                        <li>Elektirik : @invoice.ElectricityBill </li>
+                        <li>Doğalgaz : @invoice.GasBill </li>
+                        <li>Su : @invoice.WaterBill </li>
+                    </ul>
+                    <hr />
+
+
+                }
+
+
+            </div>
+
+        </div>
+    }
+
+
+</div>

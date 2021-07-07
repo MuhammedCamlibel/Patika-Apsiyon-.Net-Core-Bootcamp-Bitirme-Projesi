@@ -1,0 +1,12 @@
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\bin\Debug\net5.0\BitirmeProjesi.Entity.deps.json
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\bin\Debug\net5.0\BitirmeProjesi.Entity.dll
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\bin\Debug\net5.0\ref\BitirmeProjesi.Entity.dll
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\bin\Debug\net5.0\BitirmeProjesi.Entity.pdb
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\obj\Debug\net5.0\BitirmeProjesi.Entity.csprojAssemblyReference.cache
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\obj\Debug\net5.0\BitirmeProjesi.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\obj\Debug\net5.0\BitirmeProjesi.Entity.AssemblyInfoInputs.cache
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\obj\Debug\net5.0\BitirmeProjesi.Entity.AssemblyInfo.cs
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\obj\Debug\net5.0\BitirmeProjesi.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\obj\Debug\net5.0\BitirmeProjesi.Entity.dll
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\obj\Debug\net5.0\ref\BitirmeProjesi.Entity.dll
+C:\Users\Muhammed\source\repos\BitirmeProjesi\BitirmeProjesi.Entity\obj\Debug\net5.0\BitirmeProjesi.Entity.pdb

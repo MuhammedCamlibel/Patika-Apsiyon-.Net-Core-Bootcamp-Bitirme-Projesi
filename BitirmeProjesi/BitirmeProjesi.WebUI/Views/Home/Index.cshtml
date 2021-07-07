@@ -1,0 +1,94 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject UserManager<User> UserManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+
+ }
+
+
+<div id="app">
+    <div class="text-center">
+        <h1 class="display-4"> {{message}} </h1>
+        <hr />
+    </div>
+
+
+    
+    @if (User.Identity.IsAuthenticated) 
+    {
+        <div class="row">
+            <div class="col-6" style="width : 300px">
+                <h2>Bilgileriz</h2>
+                <hr />
+                <button v-on:click="hideShow" class="btn btn-sm btn-dark">Gizle/Göster </button>
+                <div  v-show="hesap">
+                    <div>
+                        <p> <b>Adı Soyadı</b>  : @user.FirstName @user.LastName </p>
+                        <p> <b>Kullanıcı Adı</b>  : @user.UserName </p>
+                        <p> <b>Email</b>  : @user.Email </p>
+                        <p> <b>Telefon</b>  : @user.Phone</p>
+                        <p> <b>TC No</b> : @user.TCNO </p>
+                        <p> <b>Araba Plakası</b> :@user.CarPlate </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="col-6" style="width : 300px">
+                <h2>Yapabileceğiniz Islemler</h2>
+                <hr />
+                    <partial name="_UserOperations" />
+                
+                
+            </div>
+            
+        </div>
+    }
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts
+{
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data:
+            {
+                message: "Hoşgeldiniz",
+                hesap: true,
+                
+            },
+            methods:
+            {
+                hideShow()
+                {
+                    this.hesap === true ? this.hesap = false : this.hesap = true ;
+                }
+                
+            }
+            
+
+        })
+    </script>
+    
+}
